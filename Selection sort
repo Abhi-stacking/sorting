@@ -1,3 +1,5 @@
+// USING VECTOR 
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -19,5 +21,28 @@ void sort(vector<int>&arr){
 int main() {
 vector<int> arr = {3,4,12,2,55,100};
 sort(arr);
+}
+
+// BASIC LEVEL 
+
+#include <iostream>
+using namespace std;
+
+void sort(int arr[], int n){
+    for(int i = 0; i <n-1; i++){
+        int minindex = i;
+        for( int j = i+1; j<n; j++){
+            if(arr[j]<arr[minindex]){
+                minindex = j;
+            }
+        }swap(arr[minindex], arr[i]);
+    }for (int i = 0; i<n; i++){
+        cout<<arr[i]<<" ";
+    }
+}
+
+int main() {
+int arr[] = {3,4,12,2,55,100};
+sort(arr, 6);
 
 }
