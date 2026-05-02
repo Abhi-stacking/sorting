@@ -21,8 +21,20 @@ void bubbleSort(vector<int>& arr)
 int main() {
 vector<int>arr= {3,4,12,2,55,100};
 bubbleSort(arr);
-
 }
+---------------------------------------------------------------------------------------------------------
+//BEST PRACTICE:
+void bubbleSort(vector<int>& arr, int n) 
+{
+    for (int i = 1; i<n; i++){
+        for(int j =0; j<n-i; j++){
+            if(arr[j]>arr[j+1]){
+                swap(arr[j], arr[j+1]);
+            }
+        }
+    }
+}
+--------------------------------------------------------------------------------------------------------
 
 // BASIC LEVEL
 
